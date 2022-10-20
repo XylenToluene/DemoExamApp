@@ -1,0 +1,36 @@
+﻿<Window x:Class="DemoExamApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoExamApp"
+        mc:Ignorable="d"
+        Title="Окно авторизации" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="200"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="20">
+            <Label>Логин</Label>
+            <TextBox x:Name="tbLogin"></TextBox>
+            <Label>Логин</Label>
+            <PasswordBox x:Name="tbPassword"></PasswordBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btLogin" Width="70" Click="btLogin_Click"
+                        Height="30" Margin="10">Войти</Button>
+                <Button x:Name="btLoginGuest" Click="btLoginGuest_Click"
+                        Width="130" Height="30" Margin="10">Войти как гость</Button>
+            </StackPanel>
+
+            <StackPanel Name="SpCaptcha"></StackPanel> 
+        </StackPanel>
+    </Grid>
+</Window>
